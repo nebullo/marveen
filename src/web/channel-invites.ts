@@ -53,7 +53,7 @@ interface InvitesFile {
   invites?: Record<string, InviteEntry>
 }
 
-const INVITE_DEFAULT_TTL_MS = 24 * 60 * 60 * 1000
+const INVITE_DEFAULT_TTL_MS = 60 * 60 * 1000
 
 export function agentChannelDir(name: string, mainAgentId: string, provider: ChannelProviderType): string {
   return name === mainAgentId
