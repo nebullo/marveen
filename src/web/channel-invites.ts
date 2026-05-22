@@ -203,7 +203,10 @@ export function runInviteMonitorTick(mainAgentId: string, agentsRoot: string): v
       }
 
       writeAccess(accessPath, access)
-      logger.info({ name, provider, senderId: pEntry.senderId, token: tToken }, 'Channel invite auto-approved')
+      logger.info(
+        { name, provider, senderId: pEntry.senderId, tokenPrefix: tToken.slice(0, 4) + '…' },
+        'Channel invite auto-approved',
+      )
     }
   }
 }
